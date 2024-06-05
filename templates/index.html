@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ödev 7</title>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <h1>Öğrenci Bilgileri</h1>
+      <p>İsim: {{ student_info.name }}</p>
+      <p>Soyisim: {{ student_info.surname }}</p>
+      <p>Öğrenci Numarası: {{ student_info.student_number }}</p>
+      <h2>Renkli Noktalarla Oluşturulan Görsel</h2>
+      <img src="{{ url_for('static', filename='odev6hrn.jpeg') }}" alt="Plot Image">
+      <form method="post" action="{{ url_for('generate') }}">
+        <button type="submit">Yeni Görsel Oluştur</button>
+      </form>
+    </div>
+  </body>
+</html>
